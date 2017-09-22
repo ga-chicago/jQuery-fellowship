@@ -5,6 +5,9 @@ console.log("---------------")
 //       Dramatis Personae
 // ==============================
 
+const modal = $('#myModal');
+const span = $('.close')[0];
+
 const hobbits = [
   "Frodo Baggins",
   "Samwise 'Sam' Gamgee",
@@ -117,45 +120,39 @@ $('#Rivendell').append($('#hobbits'));
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-$("li:contains('Strider')").text('Aragorn');
-};
+  $("li:contains('Strider')").text('Aragorn');
+  };
 
 // ============
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
-const fellowship = $('<div id="the-fellowship"></div>');
-fellowship.html('<h1>The Fellowship</h1>');
-$('#middle-earth').append(fellowship);
-fellowship.append($('#hobbits'));
-fellowship.append($('#buddies'));
-};
+  const fellowship = $('<div id="the-fellowship"></div>');
+  fellowship.html('<h1>The Fellowship</h1>');
+  $('#middle-earth').append(fellowship);
+  fellowship.append($('#hobbits'));
+  fellowship.append($('#buddies'));
+  };
 
 // ============
 // Chapter 9
 // ============
 const theBalrog = () => {
-$('li:contains("Gandalf the Grey")').attr('class', "the-white").text("Gandalf the White");
-};
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 9 complete - Updated Gandalf"
+  $('li:contains("Gandalf the Grey")').attr('class', "the-white").text("Gandalf the White");
+  };
 
 // ============
 // Chapter 10
 // ============
 const hornOfGondor = () => {
-
-  // 1. create a pop-up alert that the horn of gondor has been blown
-
-  // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
-  // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  modal.css('display', 'block');
+  modal.attr('class', 'animated shake');
+  $("li:contains('Boromir')").css('text-decoration', 'line-through');
+  $("li:contains('Uruk-hai')").remove();
 };
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
+$(span).on('click', () => {
+      modal.css('display', 'none');
+  });
 
 // ============
 // Chapter 11
