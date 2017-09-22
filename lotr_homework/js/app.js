@@ -46,6 +46,7 @@ const makeMiddleEarth = () => {
 
   console.log("Trying to make middle earth.");
   $middleEarth = $('<section>');
+  $middleEarth.attr('id', 'middle-earth');
   $('body').append($middleEarth);
   for(let i = 0; i < lands.length; i++){
     $article = $('<article>');
@@ -151,7 +152,16 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-
+  const $aside = $('<aside>');
+  $('#middle-earth').append($aside);
+  $ul = $('<ul>');
+  $aside.append($ul)
+  for(let i = 0; i < buddies.length; i++){
+    $li = $('<li>');
+    $li.addClass('buddy');
+    $li.text(buddies[i]);
+    $ul.append($li);
+  }
   // 1. create an aside tag and append it to middle-earth below mordor
 
   // 2. display an unordered list of buddies in the aside
