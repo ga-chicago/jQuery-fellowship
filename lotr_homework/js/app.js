@@ -268,7 +268,10 @@ const hornOfGondor = () => {
 // Chapter 11
 // ============
 const itsDangerousToGoAlone = () => {
-
+  $mordor = $('#Mordor');
+  $mordor.append($(`.hobbit:contains('Frodo Baggins')`));
+  $mordor.append($(`.hobbit:contains("Samwise 'Sam' Gamgee")`));
+  $mordor.attr('id','mount-doom');
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
   // 2. add a div with an id of 'mount-doom' to Mordor
