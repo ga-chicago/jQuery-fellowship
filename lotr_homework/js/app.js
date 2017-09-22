@@ -32,6 +32,8 @@ const lands = [
   "Rivendell",
   "Mordor"
 ];
+ const $section = $('<secton>')
+$section.attr('id','middle-earth')
 
 // ====================================
 //           Chapters
@@ -164,11 +166,23 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
+      const $aside = $('<aside>')
+      // $('#Mordor')
+      // const $Mordor = $('#Mordor')
+      $('#middle-earth')
+       const $MiddleEarth = $('#middle-earth')
+     $MiddleEarth.append($aside)
   // 2. display an unordered list of buddies in the aside
-
+ const $buddiesul = $('<ul>')
+ $aside.append($buddiesul)
   // 3. give each of the buddies a class of "buddy"
-
+for(let i = 0; i < buddies.length; i++){
+   const $buddyli = $('<li>')
+   $buddyli.text(buddies[i])
+   $buddyli.attr('class', 'buddy')
+   $buddiesul.append($buddyli)
+   $aside.append($buddiesul)
+ }
 };
 
 // COMMIT YOUR WORK
