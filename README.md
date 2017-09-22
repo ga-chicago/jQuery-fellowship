@@ -1,20 +1,5 @@
 # jQuery-fellowship
 
-![ga](http://mobbook.generalassemb.ly/ga_cog.png)
-
-# WDIR-Gizmo
-
----
-Title: Lord of the Rings <br>
-Type: Homework<br>
-Duration: 4 Hours <br>
-Created by: Many GA WDI cohorts - this version by Thom Page for WDIr-Panthalassa
-Modified by: Kristyn Bryan - updated with ES6 for WDIR-Gizmo
-Competencies: DOM manipulation with jQuery<br>
-Prerequisites: Javascript, jQuery, DOM
-
----
-
 # Homework
 
 ## Lord of the Rings
