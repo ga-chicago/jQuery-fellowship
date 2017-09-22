@@ -176,8 +176,8 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 
-const $section = $('<section>')
-  $section.attr('id','middle-earth')
+// const $section = $('<section>')
+//   $section.attr('id','middle-earth')
 
 
 const makeBuddies = () => {
@@ -212,7 +212,14 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
+
+
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+
+  const shire = $("#The-Shire").find('ul')
+  $('#Rivendell').append(shire)
+
+  console.log(shire)
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
