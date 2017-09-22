@@ -44,7 +44,6 @@ const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
-  console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
 
@@ -75,7 +74,6 @@ const makeMiddleEarth = () => {
 
 };
 
-makeMiddleEarth();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -104,8 +102,6 @@ const makeHobbits = () => {
     }
 };
 
-makeHobbits();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -115,15 +111,18 @@ makeHobbits();
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-
+    const $div = $('<div>')
+    $div.attr('id', 'the-ring');
+    
   // 2. add the ring as a child of Frodo
+    const frodo = $('.hobbit').get(0)
+    $(frodo).append($div)
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
 
 };
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
