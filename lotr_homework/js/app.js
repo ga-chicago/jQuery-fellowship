@@ -33,6 +33,8 @@ const lands = [
   "Mordor"
 ];
 
+
+
 // ====================================
 //           Chapters
 // ====================================
@@ -41,29 +43,18 @@ const lands = [
 // Chapter 1
 // ============
 const makeMiddleEarth = () => {
-
-  // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-
   console.log("Trying to make middle earth.");
-
-  // 1. create a section tag with an id of middle-earth
-
-  // 2. append the section to the body of the DOM.
-
-  // 3. use a for loop to iterate over the lands array that does the following:
-
-  //   3a. creates an article tag (there should be one for each land when the loop is done)
-
-  //   3b. gives each land article an `id` tag of the corresponding land name
-
-  //   3c. includes an h1 with the name of the land inside each land article
-
-  //   3d. appends each land to the middle-earth section
-
+  const $newsection = $('<section></section>');
+  $('body').append($newsection);
+  for (i = 0; i < lands.length; i++) {
+    const $arty = $('<article></article>', {id: 'lands-' + i});
+    const $h1 = $('<h1></h1>');
+    console.log($h1);
+    $h1.text(lands[i]);
+    $newsection.append($arty);
+    $arty.append($h1);
+  }
 };
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
 // ============
 // Chapter 2
