@@ -250,7 +250,9 @@ const theBalrog = () => {
 // Chapter 10
 // ============
 const hornOfGondor = () => {
-
+  alert('Horn of Gondor blown === true');
+  $(`.buddy:contains('Boromir')`).css('text-decoration', 'line-through');
+  $(`.baddy:contains('The Uruk-hai')`).remove();
   // 1. create a pop-up alert that the horn of gondor has been blown
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
