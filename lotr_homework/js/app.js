@@ -40,6 +40,7 @@ const lands = [
 // ============
 // Chapter 1
 // ============
+
 const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
@@ -152,9 +153,17 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
-
+  $('#Mordor')
   // 1. display an unordered list of baddies in Mordor
-
+   const $ul = $('<ul>')
+   const $Mordor = $('#Mordor')
+   $Mordor.append($ul)
+   for (let i = 0; i < baddies.length; i++){
+    const $li = $('<li>')
+    $li.text(baddies[i])
+    $li.attr('class', 'baddy')
+    $ul.append($li)
+   }
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
@@ -166,9 +175,28 @@ const makeBaddies = () => {
 // ============
 // Chapter 5
 // ============
+
+const $section = $('<section>')
+  $section.attr('id','middle-earth')
+
+
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
+  const $aside = $('<aside>')
+  $('#middle-earth').append($aside)
+  const $ul = $('<ul>');
+  $aside.append($ul)
+
+  for(let i = 0; i < buddies.length; i++){
+    
+    const $li = $('<li>');
+    $li.text(buddies[i]);
+    $li.addClass('buddy')
+    $ul.append($li)
+
+  }
+
 
   // 2. display an unordered list of buddies in the aside
 
