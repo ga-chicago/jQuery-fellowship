@@ -53,14 +53,14 @@ const makeMiddleEarth = () => {
   for(let i=0; i < lands.length; i++){
   
   //   3a. creates an article tag (there should be one for each land when the loop is done)
-    const land = $('<a>');
+    const $land = $('<a>');
   //   3b. gives each land article an `id` tag of the corresponding land name
-    land.attr('id', lands[i]);
+    $land.attr('id', lands[i]);
   //   3c. includes an h1 with the name of the land inside each land article
   //"<h1>" lands[i] "</h1>"
-    land.html("<h1>" +lands[i]+ "</h1>");
+    $land.html("<h1>" +lands[i]+ "</h1>");
   //   3d. appends each land to the middle-earth section
-    $($section).append(land)}
+    $($section).append($land)}
 };
 
 // COMMIT YOUR WORK
@@ -70,15 +70,16 @@ const makeMiddleEarth = () => {
 // Chapter 2
 // ============
 const makeHobbits = () => {
-
-  console.log('Make hobbits');
-
+const $hobbitList = $('<ul>');
+$('#The-Shire').append($hobbitList)
   // 1. display an unordered list of the hobbits in the shire.
-
+  for(let i=0; i < hobbits.length; i++){
+    const $hobbit= $('<li>');
+    $hobbit.text(hobbits[i])
+    $hobbitList.append($hobbit);
   // 2. give each hobbit a class of "hobbit"
-
+    $hobbitList.addClass("hobbit");}
   // hint: create a 'ul' outside the loop upon which to append the 'li's
-
   // hint: get 'The-Shire' by using its id
 
 };
