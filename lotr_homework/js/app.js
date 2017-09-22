@@ -270,15 +270,15 @@ const theBalrog = () => {
 // ============
 // Chapter 10
 // ============
-// const hornOfGondor = () => {
+const hornOfGondor = () => {
 
-//   // 1. create a pop-up alert that the horn of gondor has been blown
-//   alert('The horn of gondor has been BLOWN!!');
-//   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-//   const $boromir = $(".buddy:contains('Boromir')").text('Boromir').css('text-decoration', 'line-through');
-//   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-//   const $urukHai = $(".baddy:contains('The Uruk-Hai')").remove('The Uruk-Hai');
-// };
+  // 1. create a pop-up alert that the horn of gondor has been blown
+  alert('The horn of gondor has been BLOWN!!');
+  // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+  const $boromir = $(".buddy:contains('Boromir')").text('Boromir').css('text-decoration', 'line-through');
+  // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+ $(`.baddy:contains('The Uruk-hai')`).remove();
+};
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
