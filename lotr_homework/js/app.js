@@ -70,22 +70,12 @@ const makeHobbits = () => {
   }
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 2 complete - Made the Hobbits".
-
 // ============
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
-
-  // 1. create an empty div with an id of 'the-ring'
-
-  // 2. add the ring as a child of Frodo
-
-  // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-
-  // when you think you have given Frodo the ring, check in your Elements tab
-
+  const $newdiv = $('<div></div>', {id: 'the-ring'});
+  $('.hobbit').append($newdiv);
 };
 
 // COMMIT YOUR WORK
