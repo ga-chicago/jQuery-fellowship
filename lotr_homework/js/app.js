@@ -85,22 +85,6 @@ const keepItSecretKeepItSafe = () => {
   const ring = $('<div id="the-ring"></div>');
   $(".hobbit:contains('Frodo Baggins')").append(ring);
 
-
-
-
-  // for (let i = 0; i < frodo.length; i++){
-  //   if (frodo[i].text() === "frodo baggins"){
-  //     frodo[i].append(ring);
-  //   };
-  // };
-  // 1. create an empty div with an id of 'the-ring'
-
-  // 2. add the ring as a child of Frodo
-
-  // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-
-  // when you think you have given Frodo the ring, check in your Elements tab
-
 };
 
 // COMMIT YOUR WORK
@@ -110,12 +94,13 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
-
-  // 1. display an unordered list of baddies in Mordor
-
-  // 2. give each of the baddies a class of "baddy"
-
-  // 3. remember to append them to Mordor
+    const badUL = $('<ul id="baddies"></ul>');
+      for (let i = 0; i < baddies.length; i++) {
+        let baddy = $('<li class="baddy"></li>');
+        baddy.text(baddies[i]);
+        badUL.append(baddy);
+      };
+    $('#Mordor').append(badUL);
 };
 
 // COMMIT YOUR WORK
@@ -125,12 +110,13 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-
-  // 1. create an aside tag and append it to middle-earth below mordor
-
-  // 2. display an unordered list of buddies in the aside
-
-  // 3. give each of the buddies a class of "buddy"
+    const budUL = $('<aside id="baddies"></aside>');
+      for (let i = 0; i < buddies.length; i++) {
+        let buddy = $('<li class="buddy"></li>');
+        buddy.text(buddies[i]);
+        budUL.append(buddy);
+      };
+    $('#middle-earth').append(budUL);
 
 };
 
