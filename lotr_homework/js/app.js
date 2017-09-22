@@ -113,11 +113,17 @@ const keepItSecretKeepItSafe = () => {
 // ============
 const makeBaddies = () => {
 
-  // 1. display an unordered list of baddies in Mordor
-
-  // 2. give each of the baddies a class of "baddy"
-
-  // 3. remember to append them to Mordor
+  const aside = $('<aside>');
+  const baddyList = $('<ul>');
+  for(let i = 0; i < baddies.length; i++) {
+    // attach an unordered list of the 'buddies' in the aside
+    const baddy = $('<li>');
+    baddy.text(baddies[i]);
+    baddyList.append(baddy);
+  }
+  // insert your aside as a child element of rivendell
+  aside.append(baddyList);
+  mordor.append(aside);
 };
 
 // COMMIT YOUR WORK
@@ -128,11 +134,17 @@ const makeBaddies = () => {
 // ============
 const makeBuddies = () => {
 
-  // 1. create an aside tag and append it to middle-earth below mordor
-
-  // 2. display an unordered list of buddies in the aside
-
-  // 3. give each of the buddies a class of "buddy"
+  const aside = $('<aside>');
+  const buddyList = $('<ul>');
+  for(let i = 0; i < buddies.length; i++) {
+    // attach an unordered list of the 'buddies' in the aside
+    const buddy = $('<li>');
+    buddy.text(buddies[i]);
+    buddyList.append(buddy);
+  }
+  // insert your aside as a child element of rivendell
+  aside.append(buddyList);
+  rivendell.append(aside);
 
 };
 
