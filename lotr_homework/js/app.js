@@ -72,8 +72,9 @@ const makeMiddleEarth = () => {
     
     const newV = $('<article>') 
     newV.attr('id', lands[i])
-    const $h1 = ('<h1>')
-    newV.append($h1).text(lands[i])
+    const $h1 = $('<h1>')
+    $h1.text(lands[i])
+    newV.append($h1)
     $section.append(newV)
 
     console.log(lands[i])
@@ -84,7 +85,7 @@ const makeMiddleEarth = () => {
 
 };
 
-makeMiddleEarth()
+// makeMiddleEarth()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -92,13 +93,28 @@ makeMiddleEarth()
 // ============
 // Chapter 2
 // ============
+
+$('#The-Shire')
+  const $ul = $('<ul>')
+  const $TheShire = $('#The-Shire')
 const makeHobbits = () => {
 
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
+  $('#The-Shire')
+  const $ul = $('<ul>')
+  const $TheShire = $('#The-Shire')
+  $TheShire.append($ul)
+  console.log($TheShire)
 
   // 2. give each hobbit a class of "hobbit"
+  for(let i = 0; i < hobbits.length; i++){
+    const $hobli = $('<li>')
+    $hobli.text(hobbits[i])
+    $hobli.addClass('hobbit')
+    $ul.append($hobli)
+  }
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
