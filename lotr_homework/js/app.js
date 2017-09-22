@@ -76,7 +76,7 @@ const makeMiddleEarth = () => {
   //   3d. appends each land to the middle-earth section
 
 };
-makeMiddleEarth();
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -86,16 +86,27 @@ makeMiddleEarth();
 // ============
 const makeHobbits = () => {
 
-  console.log('Make hobbits');
+ 
 
   // 1. display an unordered list of the hobbits in the shire.
+  $('#The-Shire')
+  const $ul = $('<ul>')
+  const $TheShire = $('#The-Shire')
+   $TheShire.append($ul)
+   
 
+   for(let i = 0; i < hobbits.length; i++){
+   const $hobli = $('<li>')
+   $hobli.text(hobbits[i])
+   $hobli.addClass('hobbit')
+   $ul.append($hobli)
+ }
   // 2. give each hobbit a class of "hobbit"
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
-
+ console.log('Make hobbits');
 };
 
 // COMMIT YOUR WORK
