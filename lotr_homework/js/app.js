@@ -72,13 +72,19 @@ const makeHobbits = () => {
 
   console.log('Make hobbits');
 
-  // 1. display an unordered list of the hobbits in the shire.
-
-  // 2. give each hobbit a class of "hobbit"
-
-  // hint: create a 'ul' outside the loop upon which to append the 'li's
-
-  // hint: get 'The-Shire' by using its id
+const theShire = $(document.body).find( ":contains(Shire)" )
+const rivendell = $(document.body).find( ":contains(Rivendell)" )
+const mordor = $(document.body).find( ":contains(Mordor)" );
+const makeHobbits = () => {
+  // display an unordered list of hobbits in the shire (which is the first article tag on the page)
+  const hobbitList = $('<ul>');
+  for(let i = 0; i < hobbits.length; i++) {
+  // give each hobbit a class of hobbit
+    const hobbit = $('<li class="hobbit">');
+    hobbit.text(hobbits[i]);
+    hobbitList.append(hobbit);
+  }
+  theShire.append(hobbitList);
 
 };
 
@@ -90,13 +96,12 @@ const makeHobbits = () => {
 // ============
 const keepItSecretKeepItSafe = () => {
 
-  // 1. create an empty div with an id of 'the-ring'
-
-  // 2. add the ring as a child of Frodo
-
-  // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-
-  // when you think you have given Frodo the ring, check in your Elements tab
+const frodo = $(document.body).find( ":contains(Frodo)" );
+const keepItSecretKeepItSafe = () => {
+  // create a div with an id of 'the-ring'
+  const theRing = $('<div ID="the-ring" class="magic-imbued-jewelry">');
+  // add the ring as a child of Frodo
+  frodo.append(theRing);
 
 };
 
