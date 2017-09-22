@@ -96,7 +96,7 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-    const budUL = $('<aside id="baddies"></aside>');
+    const budUL = $('<aside id="buddies"></aside>');
       for (let i = 0; i < buddies.length; i++) {
         let buddy = $('<li class="buddy"></li>');
         buddy.text(buddies[i]);
@@ -120,22 +120,15 @@ const beautifulStranger = () => {
 $("li:contains('Strider')").text('Aragorn');
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
-
 // ============
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
-
-  // 1. create a new div with an id 'the-fellowship'
-
-  // 2. add an h1 with the text 'The Fellowship' to this new div
-
-  // 3. append the fellowship to middle-earth
-
-  // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+const fellowship = $('<div id="the-fellowship"></div>');
+fellowship.html('<h1>The Fellowship</h1>');
+$('#middle-earth').append(fellowship);
+fellowship.append($('#hobbits'));
+fellowship.append($('#buddies'));
 };
 
 // COMMIT YOUR WORK
