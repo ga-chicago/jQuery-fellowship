@@ -156,9 +156,10 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
-  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
-  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+const hobbitses = $(document.body).find( ":contains(Hobbit)");
+const leaveTheShire = () => {
+  // assemble the hobbits and move them to Rivendell
+rivendell.append(hobbitses);
 
 };
 
@@ -168,12 +169,11 @@ const leaveTheShire = () => {
 // ============
 // Chapter 7
 // ============
+
+const strider = $(document.body).find( ":contains(Strider)");
 const beautifulStranger = () => {
-
-  // 1. change the buddy 'Strider' textnode to "Aragorn"
-
-  // hint: You can get a list of elements by tag name, such as 'aside'
-
+  // change the 'Strider' textnode to 'Aragorn'
+  strider.text('Aragon');
 };
 
 // COMMIT YOUR WORK
