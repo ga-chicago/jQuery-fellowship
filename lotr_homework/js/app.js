@@ -42,8 +42,6 @@ const lands = [
 // ============
 const makeMiddleEarth = () => {
 
-  // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-
   console.log("Trying to make middle earth.");
     const middleEarth = $('<section id="middle-earth"></section>');
       for (let i = 0; i < lands.length; i++) {
@@ -55,9 +53,6 @@ const makeMiddleEarth = () => {
     $('body').append(middleEarth);
 
 };
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
 // ============
 // Chapter 2
@@ -75,9 +70,6 @@ const makeHobbits = () => {
   };
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 2 complete - Made the Hobbits".
-
 // ============
 // Chapter 3
 // ============
@@ -86,9 +78,6 @@ const keepItSecretKeepItSafe = () => {
   $(".hobbit:contains('Frodo Baggins')").append(ring);
 
 };
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
 // ============
 // Chapter 4
@@ -102,9 +91,6 @@ const makeBaddies = () => {
       };
     $('#Mordor').append(badUL);
 };
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
 // ============
 // Chapter 5
@@ -120,9 +106,6 @@ const makeBuddies = () => {
 
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 5 complete - Made the Buddies".
-
 // ============
 // Chapter 6
 // ============
@@ -130,18 +113,11 @@ const leaveTheShire = () => {
 $('#Rivendell').append($('#hobbits'));
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 6 complete - Left the Shire"
-
 // ============
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-
-  // 1. change the buddy 'Strider' textnode to "Aragorn"
-
-  // hint: You can get a list of elements by tag name, such as 'aside'
-
+$("li:contains('Strider')").text('Aragorn');
 };
 
 // COMMIT YOUR WORK
