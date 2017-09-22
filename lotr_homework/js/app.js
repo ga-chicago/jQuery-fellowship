@@ -207,6 +207,15 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
+  $div = $('<div>')
+  $h1 = $('<h1>')
+  $h1.text('The Fellowship');
+  $div.attr('id','the-fellowship');
+  $div.append($h1);
+  $('#middle-earth').append($div);
+  $('ul').each(function(){
+    $div.append($(this))
+  });
 
   // 1. create a new div with an id 'the-fellowship'
 
