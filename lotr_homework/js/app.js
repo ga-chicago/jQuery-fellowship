@@ -100,7 +100,6 @@ const makeHobbits = () => {
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
-
 };
 
 // console.log(makeHobbits());
@@ -128,7 +127,6 @@ const keepItSecretKeepItSafe = () => {
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
-
 };
 
 // console.log(keepItSecretKeepItSafe());
@@ -169,13 +167,27 @@ const makeBaddies = () => {
 // ============
 const makeBuddies = () => {
 
+  console.log('Make buddies');
+
   // 1. create an aside tag and append it to middle-earth below mordor
+  const $aside = $('<aside>');
+  const $midEarth = $('#middle-earth');
+  $midEarth.append($aside);
 
   // 2. display an unordered list of buddies in the aside
+  const $ulBuddies = $('<ul>');
+  for (d = 0; d < buddies.length; d++){
+    const $liBuddies = $('<li>');
+    $liBuddies.text(buddies[d]);
 
   // 3. give each of the buddies a class of "buddy"
-
+    $liBuddies.addClass('buddy');
+    $ulBuddies.append($liBuddies);
+  }
+  $aside.append($ulBuddies);
 };
+
+// console.log(makeBuddies());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
