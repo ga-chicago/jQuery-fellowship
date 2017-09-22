@@ -72,7 +72,7 @@ const makeMiddleEarth = () => {
   }
 };
 
-console.log(makeMiddleEarth());
+// console.log(makeMiddleEarth());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -103,7 +103,7 @@ const makeHobbits = () => {
 
 };
 
-console.log(makeHobbits());
+// console.log(makeHobbits());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -113,15 +113,27 @@ console.log(makeHobbits());
 // ============
 const keepItSecretKeepItSafe = () => {
 
+  console.log('Giving Frodo the ring');
+
   // 1. create an empty div with an id of 'the-ring'
 
+  const $emptyDiv = $('<div>');
+  $emptyDiv.attr('id', 'the-ring');
+  const $ringDiv = $emptyDiv[0];
+
   // 2. add the ring as a child of Frodo
+
+  const $allHobbits = $('.hobbit');
+  const $liFrodo = $allHobbits[0];
+  $liFrodo.append($ringDiv);
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
 
 };
+
+// console.log(keepItSecretKeepItSafe());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
