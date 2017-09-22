@@ -115,8 +115,7 @@ const keepItSecretKeepItSafe = () => {
     $div.attr('id', 'the-ring');
     
   // 2. add the ring as a child of Frodo
-    const frodo = $('.hobbit').get(0)
-    $(frodo).append($div)
+    $('.hobbit').get(0).append($div[0])
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
@@ -132,10 +131,17 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
   // 2. give each of the baddies a class of "baddy"
-
   // 3. remember to append them to Mordor
+    const $ul = $('<ul>')
+    $('#Mordor').append($ul)
+
+    for (let i = 0; i < baddies.length; i++) {
+      const $li = $('<li>')
+      $li.text(baddies[i])
+      $li.addClass('baddy')
+      $ul.append($li)
+    }
 };
 
 // COMMIT YOUR WORK
