@@ -45,6 +45,16 @@ const makeMiddleEarth = () => {
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
   console.log("Trying to make middle earth.");
+  $middleEarth = $('<section>');
+  $('body').append($middleEarth);
+  for(let i = 0; i < lands.length; i++){
+    $article = $('<article>');
+    $h1 = $('<h1>');
+    $h1.text(lands[i]);
+    $article.attr('id', lands[i]);
+    $article.append($h1);
+    $middleEarth.append($article);
+  }
 
   // 1. create a section tag with an id of middle-earth
 
@@ -71,6 +81,14 @@ const makeMiddleEarth = () => {
 const makeHobbits = () => {
 
   console.log('Make hobbits');
+  $ul = $('<ul>');
+  for(let i = 0; i < hobbits.length; i++){
+    $li = $('<li>');
+    $li.addClass('hobbit');
+    $li.text(hobbits[i]);
+    $ul.append($li);
+  }
+  $('#The-Shire').append($ul);
 
   // 1. display an unordered list of the hobbits in the shire.
 
@@ -90,6 +108,9 @@ const makeHobbits = () => {
 // ============
 const keepItSecretKeepItSafe = () => {
 
+  $div = $('<div>');
+  $div.attr('id', 'the-ring');
+  $(`.hobbit:contains('Frodo Baggins')`).append($div);
   // 1. create an empty div with an id of 'the-ring'
 
   // 2. add the ring as a child of Frodo
