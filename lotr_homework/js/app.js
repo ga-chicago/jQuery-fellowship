@@ -279,8 +279,16 @@ const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
+    const moveFrodo = $(`.hobbit:contains('Frodo')`)
+    $('#Mordor').append(moveFrodo)
+    
+    const moveSam = $('#the-fellowship').children().eq(2).children().eq(0)
+    $('#Mordor').append(moveSam[0])
   // 2. add a div with an id of 'mount-doom' to Mordor
 
+    const $div = $('<div>')
+    $div.attr('id', 'mount-doom')
+    $('#Mordor').append($div)
 };
 
 // COMMIT YOUR WORK
