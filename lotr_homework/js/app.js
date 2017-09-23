@@ -341,11 +341,12 @@ $('#Mordor')
    const $div = $('<div>')
    $div.attr('id', 'mount-doom')
    $Mordor.append($div)
-   
+
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
 };
+itsDangerousToGoAlone()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
@@ -356,12 +357,17 @@ $('#Mordor')
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+  const $div = $('<div>')
+  $div.attr('id', 'gollum')
+  $('#Mordor').append($div)
   // 2. Move the ring from Frodo and give it to Gollum
-
+  $('#the-ring').detach()
+  $div.append('#the-ring')
   // 3. Move Gollum into Mount Doom
+  $('#mount-doom').append($div)
 
 };
+weWantsIt()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
@@ -372,12 +378,18 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
+  $('#gollum').remove()
 
   // 2. remove all the baddies from the DOM
-
+  $('.baddy').remove()
   // 3. Move all the hobbits back to the shire
+  const $hobbitBoys = $('.hobbit');
+
+
+  $('#The-Shire').append($hobbitBoys)
 
 };
+thereAndBackAgain()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
