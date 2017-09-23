@@ -272,13 +272,17 @@ const itsDangerousToGoAlone = () => {
 // ============
 // Chapter 12
 // ============
+
+const gollum = 0, theRing = 0;
+
 const weWantsIt = () => {
 
-  // 1. Create a div with an id of 'gollum' and add it to Mordor
 
-  // 2. Move the ring from Frodo and give it to Gollum
-
-  // 3. Move Gollum into Mount Doom
+  gollum = $('<div ID="gollum">');
+  theRing = frodo.find( ":contains(ring)");
+  gollum.append(theRing);
+  const mountDoom = mordor.find( ":contains(doom)");
+  mountDoom.append(gollum);
 
 };
 
@@ -290,11 +294,16 @@ const weWantsIt = () => {
 // ============
 const thereAndBackAgain = () => {
 
-  // 1. remove Gollum and the Ring from the DOM
-
-  // 2. remove all the baddies from the DOM
-
-  // 3. Move all the hobbits back to the shire
+  gollum.parent.remove(gollum);
+  // remove Gollum and the Ring from the document
+  // remove all the baddies from the document
+  const hobbitUL = ('<ul>');
+  const hobbits = body.find( ":contains(hobbits)");
+  for(let i = 0; i < hobbits.length; i++){
+    hobbitUL.append(hobbits[i]);
+  }
+  theShire.append(hobbitUL);
+  // Move all the hobbits back to the shire
 
 };
 
