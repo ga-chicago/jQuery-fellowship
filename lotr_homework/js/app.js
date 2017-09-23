@@ -246,9 +246,11 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+ const $gandalf = $($('.buddy')[0])
+ $gandalf.text('Gandalf the White')
 
   // 2. add a class "the-white" to this element
-
+  $gandalf.attr('class', 'the-white')
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
@@ -262,9 +264,10 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+      
+      alert('the horn of gondor has been blown')
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+      alert('Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name')
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
 };
