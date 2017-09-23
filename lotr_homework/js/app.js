@@ -234,10 +234,16 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+  $(`.buddy:contains('Strider')`).text('Aragorn');
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
+
+
+
+
+
+beautifulStranger($('.buddy'))
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
