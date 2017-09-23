@@ -86,7 +86,7 @@ const makeMiddleEarth = () => {
 
 };
 
-// makeMiddleEarth()
+ makeMiddleEarth()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -123,6 +123,8 @@ const makeHobbits = () => {
 
 };
 
+makeHobbits()
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -145,6 +147,7 @@ const keepItSecretKeepItSafe = () => {
 
 
 };
+keepItSecretKeepItSafe()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -168,6 +171,7 @@ const makeBaddies = () => {
 
   // 3. remember to append them to Mordor
 };
+makeBaddies()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -203,6 +207,7 @@ const makeBuddies = () => {
   // 3. give each of the buddies a class of "buddy"
 
 };
+makeBuddies()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -224,6 +229,7 @@ const leaveTheShire = () => {
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
+leaveTheShire()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -238,6 +244,7 @@ const beautifulStranger = () => {
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
+beautifulStranger()
 
 
 
@@ -255,13 +262,29 @@ const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
 
+  const $div = $('<div>')
+  $div.attr('id', 'the-fellowship')
+  const $h1 = $('<h1>')
+  $h1.text('the-fellowship')
+  $div.append($h1)
+  console.log($div)
+  $('#middle-earth').append($div)
+
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+  $('.buddy')
+  $('.hobbit')
+  const $hobbit = $('.hobbit')
+  const $buddy = $('.buddy')
+  $div.append($buddy)
+  $div.append($hobbit)
+
 
 };
+forgeTheFellowShip()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
