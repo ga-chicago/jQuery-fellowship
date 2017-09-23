@@ -40,19 +40,20 @@ const lands = [
 // ============
 // Chapter 1
 // ============
-const makeMiddleEarth = () => {
+  body = $('body')
 
+const makeMiddleEarth = () => {
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
   console.log("Trying to make middle earth.");
-
     // create a section tag with an id of middle-earth
     const middleEarth = $('<section ID="middle-earth">');
     for(let i = 0; i < lands.length; i++) {
       // add each land as an article tag
       const land = $('<article>');
+      land.attr("id", lands[i]);
       // inside each article tag include an h1 with the name of the land
-      const name = $('<h1>')
+      const name = $('<h1>');
       name.text(lands[i]);
       land.append(name);
       middleEarth.append(land);
@@ -72,12 +73,12 @@ const makeHobbits = () => {
 
   console.log('Make hobbits');
 
-const theShire = $(document.body).find( ":contains(Shire)" )
-const rivendell = $(document.body).find( ":contains(Rivendell)" )
-const mordor = $(document.body).find( ":contains(Mordor)" );
+const theShire = $("#The-Shire" )
+const rivendell = $("#Rivendell" )
+const mordor = $("#Mordor" )
 const makeHobbits = () => {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
-  const hobbitList = $('<ul>');
+  const hobbitList = $('<ul class="hobbitses">');
   for(let i = 0; i < hobbits.length; i++) {
   // give each hobbit a class of hobbit
     const hobbit = $('<li class="hobbit">');
@@ -94,7 +95,6 @@ const makeHobbits = () => {
 // ============
 // Chapter 3
 // ============
-const keepItSecretKeepItSafe = () => {
 
 const frodo = $(document.body).find( ":contains(Frodo)" );
 const keepItSecretKeepItSafe = () => {
@@ -154,9 +154,8 @@ const makeBuddies = () => {
 // ============
 // Chapter 6
 // ============
-const leaveTheShire = () => {
 
-const hobbitses = $(document.body).find( ":contains(Hobbit)");
+const hobbitses = $(".hobbitses");
 const leaveTheShire = () => {
   // assemble the hobbits and move them to Rivendell
 rivendell.append(hobbitses);
@@ -182,7 +181,18 @@ const beautifulStranger = () => {
 // ============
 // Chapter 8
 // ============
+
+const fellowshipMembers = rivendell.find( ":contains(li))");
+
 const forgeTheFellowShip = () => {
+  // create a new div called 'the-fellowship' within rivendell
+  const theFellowship = $("<div ID='the-fellowship'>");
+  for(let i = 0; i < fellowshipMembers.length; i++) {
+    theFellowship.append(fellowshipMembers[i]);
+  }
+  rivendell.append(theFellowship);
+}
+
 
   // 1. create a new div with an id 'the-fellowship'
 
@@ -192,7 +202,7 @@ const forgeTheFellowShip = () => {
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
-};
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -200,13 +210,21 @@ const forgeTheFellowShip = () => {
 // ============
 // Chapter 9
 // ============
+
+const gandalf = fellowshipMembers[0];
+
+
 const theBalrog = () => {
 
-  // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+  // change the 'Gandalf' textNode to 'Gandalf the White'
+  gandalf.text('Gandalf the White');
+  // apply style to the element
+  gandalf.css('border', '3px solid gray');
+  // make the background 'white', add a grey border
+  gandalf.css('backgroundColor', 'white');
 
-  // 2. add a class "the-white" to this element
 
-  // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
+
 
 };
 
@@ -218,11 +236,15 @@ const theBalrog = () => {
 // ============
 const hornOfGondor = () => {
 
-  // 1. create a pop-up alert that the horn of gondor has been blown
+const boromir = fellowshipMembers[4];
 
-  // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+  alert('the horn of gondor has blown');
+  // pop up an alert that the horn of gondor has been blown
+  boromir.css("textDecoration",'line-through');
+  // Boromir's been killed by the Uruk-hai!
+  // Remove Boromir from the Fellowship
+  boromir.parentNode.remove(boromir)
 
-  // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
 };
 
@@ -232,11 +254,15 @@ const hornOfGondor = () => {
 // ============
 // Chapter 11
 // ============
+const sam = fellowshipMembers[6];
+
 const itsDangerousToGoAlone = () => {
 
-  // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
-  // 2. add a div with an id of 'mount-doom' to Mordor
+  // take Frodo and Sam out of the fellowship and move them to Mordor
+  mordor.append(frodo);
+  mordor.append(sam);
+  const mountDoom = $('<div ID="mount-doom">');
+  mordor.append(mountDoom);
 
 };
 
