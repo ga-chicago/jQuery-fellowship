@@ -313,13 +313,17 @@ theBalrog()
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
+alert('the horn of gondor has been blown')
 
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+$(`.buddy:contains('Boromir')`).css('text-decoration', 'line-through');
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+ $('.baddy').get(2).empty()
+ 
 
 };
+hornOfGondor()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
