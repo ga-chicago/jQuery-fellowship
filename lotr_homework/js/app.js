@@ -211,6 +211,11 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
+  const strider = $('.buddy')[3] 
+  $(strider).text("Aragorn")
+  // $aragorn.text("Argaron")
+  // $p.text("this is the p text")
+  // frodo.append($div[3])
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
