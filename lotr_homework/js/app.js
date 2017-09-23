@@ -325,10 +325,14 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+ const $gollum = $($('#gollum'))
+    $gollum.remove();
   // 2. remove all the baddies from the DOM
-
+const $allBaddies = $($('.baddy'))
+      $allBaddies.remove();
   // 3. Move all the hobbits back to the shire
+  const $allhobbits = $($('.hobbit'))
+    $('#The-Shire').append($allhobbits)
 
 };
 
