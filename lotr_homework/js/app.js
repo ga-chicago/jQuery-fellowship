@@ -167,10 +167,7 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
       const $aside = $('<aside>')
-      // $('#Mordor')
-      // const $Mordor = $('#Mordor')
-      $('#middle-earth')
-       const $MiddleEarth = $('#middle-earth')
+      const $MiddleEarth = $('#middle-earth')
      $MiddleEarth.append($aside)
   // 2. display an unordered list of buddies in the aside
  const $buddiesul = $('<ul>')
@@ -181,8 +178,8 @@ for(let i = 0; i < buddies.length; i++){
    $buddyli.text(buddies[i])
    $buddyli.attr('class', 'buddy')
    $buddiesul.append($buddyli)
-   $aside.append($buddiesul)
  }
+ $aside.append($buddiesul)
 };
 
 // COMMIT YOUR WORK
@@ -213,9 +210,6 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
   const strider = $('.buddy')[3] 
   $(strider).text("Aragorn")
-  // $aragorn.text("Argaron")
-  // $p.text("this is the p text")
-  // frodo.append($div[3])
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
@@ -230,12 +224,16 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
+    const $div = $('<div>', {id:'the-fellowship'})
+  //$div.attr('id', 'the-fellowship') the long way of adding ID
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
+    const $h1 = $('<h1>').text('The Fellowship')
+    $div.append($h1)
   // 3. append the fellowship to middle-earth
-
+    $('#middle-earth').append($div)//so we don't variable of $MiddleEarth because we don't need need to store it for later.
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+    $div.append($('.hobbit').parent('ul'))
+    $div.append($('.buddy').parent('ul'))
 
 };
 
