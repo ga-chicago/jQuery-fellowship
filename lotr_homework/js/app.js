@@ -228,7 +228,14 @@ const beautifulStranger = () => {
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
+    $(".buddy").each(function(){         
+    if ($(this).text() === "Strider") { //what was this supossed to be?
+      $(this).text("Aragorn");
+    }
+  });
 };
+
+beautifulStranger();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
