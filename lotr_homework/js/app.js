@@ -127,7 +127,7 @@ const keepItSecretKeepItSafe = () => {
 
   const $theRing = $("<div id='the-ring'>")
 
-  $(".hobbit").each(function(){               //is it ok to use "funciton in ES6?"
+  $(".hobbit").each(function(){               //is it ok to use "funciton" in ES6?
     if ($(this).text() === "Frodo Baggins") {
       $(this).append($theRing);
     }
@@ -153,7 +153,19 @@ const makeBaddies = () => {
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
+
+  const $baddies = $("<ul id='baddies'>");
+  $("#Mordor").append($baddies);
+
+  for (let i=0; i < baddies.length; i++) {
+    const $li = $("<li>");
+    $li.addClass("baddy");
+    $li.text(baddies[i]);
+    $baddies.append($li);
+  }
 };
+
+makeBaddies()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
