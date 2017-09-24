@@ -279,7 +279,16 @@ const theBalrog = () => {
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
+$(".buddy").each(function()
+    {         
+    if ($(this).text() === "Gandalf the Grey") {
+      $(this).text("Gandalf the White");
+      $(this).addClass("the-white");
+      }
+    });
 };
+
+theBalrog();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
