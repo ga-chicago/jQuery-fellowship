@@ -253,7 +253,17 @@ const forgeTheFellowShip = () => {
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
+  const $fellowship = $("<div id='the-fellowship'>");
+  $("#middle_earth").append($fellowship);
+
+  const $h1 = $("<h1>");
+  $h1.text("The Fellowship");
+  $fellowship.append($h1);
+
+  $("#the-fellowship").append($("#hobbits"));
+  $("#the-fellowship").append($("#buddies"));
 };
+forgeTheFellowShip();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
