@@ -210,7 +210,11 @@ const leaveTheShire = () => {
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
+  $("#Rivendell").append($("#The-Shire").children("#hobbits"));
+
 };
+
+leaveTheShire();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
