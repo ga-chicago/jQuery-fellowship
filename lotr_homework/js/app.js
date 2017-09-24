@@ -338,6 +338,14 @@ const weWantsIt = () => {
 // ============
 const thereAndBackAgain = () => {
 
+
+  $('#gollum').remove();
+  $('.baddy').remove();
+
+  const homebound = $('.hobbit')
+
+  $('#The-Shire').append(homebound)
+
   // 1. remove Gollum and the Ring from the DOM
 
   // 2. remove all the baddies from the DOM
