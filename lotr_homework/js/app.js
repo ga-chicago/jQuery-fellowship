@@ -310,6 +310,17 @@ const itsDangerousToGoAlone = () => {
 // Chapter 12
 // ============
 const weWantsIt = () => {
+ const bilbo = $('<div id=\'gollum\'>')
+  $('#Mordor').append(bilbo)
+
+  const ringOfPower = $('#the-ring')
+  bilbo.append(ringOfPower)
+
+
+  const volcano = $('#mount-doom')
+
+  volcano.append(bilbo)
+
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
