@@ -249,6 +249,9 @@ $('#middle-earth').append($fellow);
 const theBalrog = () => {
 
   $('.buddy').eq(0).html('Gandalf the White')
+  $('.buddy').eq(0).attr('class', 'the-white')
+  $('.the-white').css('background-color', 'white')
+  $('.the-white').css('border', 'solid gray')
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
@@ -265,6 +268,12 @@ const theBalrog = () => {
 // Chapter 10
 // ============
 const hornOfGondor = () => {
+
+  alert('The horn of Gondor has been blown!')
+
+  $('.buddy').eq(3).html('<strike>Boromir</strike>')
+
+  $('.baddy').eq(2).remove()
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
