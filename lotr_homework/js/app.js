@@ -291,7 +291,7 @@ $(".buddy").each(function()
 theBalrog();
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 9 complete - Updated Gandalf"
+// The commit message should read: 3
 
 // ============
 // Chapter 10
@@ -303,8 +303,22 @@ const hornOfGondor = () => {
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+  alert("The Horn of Gondor has been blown!")
 
+  $(".buddy").each(function() {
+    if ($(this).text() === "Boromir") {
+      $(this).css("text-decoration", "line-through");
+    };
+  });
+
+  $(".baddy").each(function() {
+    if ($(this).text() === "The Uruk-hai") {
+      $(this).remove();
+    }
+  });
 };
+
+hornOfGondor();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
