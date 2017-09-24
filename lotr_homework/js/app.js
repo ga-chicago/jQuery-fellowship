@@ -248,6 +248,8 @@ $('#middle-earth').append($fellow);
 // ============
 const theBalrog = () => {
 
+  $('.buddy').eq(0).html('Gandalf the White')
+
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
   // 2. add a class "the-white" to this element
