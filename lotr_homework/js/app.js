@@ -348,7 +348,6 @@ const weWantsIt = () => {
 
   $gollum.append($theRing);
   $("#mount-doom").append($gollum);
-
 };
 
 // COMMIT YOUR WORK
@@ -364,6 +363,12 @@ const thereAndBackAgain = () => {
   // 2. remove all the baddies from the DOM
 
   // 3. Move all the hobbits back to the shire
+
+  $("#gollum").remove();
+  $("#baddies").remove();
+  $(".hobbit").each(function() {
+    $("#The-Shire").append($(this));
+  });
 
 };
 
