@@ -74,8 +74,6 @@ const makeMiddleEarth = () => {
   }
 };
 
-makeMiddleEarth()
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -107,8 +105,6 @@ const makeHobbits = () => {
   }
 };
 
-makeHobbits();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -132,13 +128,9 @@ const keepItSecretKeepItSafe = () => {
       $(this).append($theRing);
     }
   });
-
-  $theRing.append()
-
-
 };
 
-keepItSecretKeepItSafe()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -165,7 +157,7 @@ const makeBaddies = () => {
   }
 };
 
-makeBaddies()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -196,8 +188,6 @@ const makeBuddies = () => {
 
 };
 
-makeBuddies();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -213,8 +203,6 @@ const leaveTheShire = () => {
   $("#Rivendell").append($("#The-Shire").children("#hobbits"));
 
 };
-
-leaveTheShire();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -234,8 +222,6 @@ const beautifulStranger = () => {
     }
   });
 };
-
-beautifulStranger();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -263,7 +249,6 @@ const forgeTheFellowShip = () => {
   $("#the-fellowship").append($("#hobbits"));
   $("#the-fellowship").append($("#buddies"));
 };
-forgeTheFellowShip();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -287,8 +272,6 @@ $(".buddy").each(function()
       }
     });
 };
-
-theBalrog();
 
 // COMMIT YOUR WORK
 // The commit message should read: 3
@@ -318,8 +301,6 @@ const hornOfGondor = () => {
   });
 };
 
-hornOfGondor();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
@@ -332,6 +313,16 @@ const itsDangerousToGoAlone = () => {
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
+   $(".hobbit").each(function() {
+    if ($(this).text() === "Frodo Baggins") {
+      $("#Mordor").append($(this));
+    } else if ($(this).text() === "Samwise 'Sam' Gamgee") {
+      $("#Mordor").append($(this));
+    }
+  });
+
+   const $mtDoom = $("<div id='mount-doom'>");
+   $("#Mordor").append($mtDoom);
 };
 
 // COMMIT YOUR WORK
