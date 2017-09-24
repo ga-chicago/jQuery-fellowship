@@ -221,6 +221,15 @@ heroes.eq(3).html('Aragorn')
 // ============
 const forgeTheFellowShip = () => {
 
+
+  const $fellow = $('<div id=\'the-fellowship\'>');
+
+  const $members = $('<h1>The Fellowship</h1>');
+  $fellow.append($members);
+  $fellow.append($('.hobbit'))
+  $fellow.append($('.buddy'))
+$('#middle-earth').append($fellow);
+
   // 1. create a new div with an id 'the-fellowship'
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
