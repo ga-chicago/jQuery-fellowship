@@ -43,17 +43,10 @@ const lands = [
 const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-
-  console.log("Trying to make middle earth.");
-
+ 
   // 1. create a section tag with an id of middle-earth
 
-  const $middle_earth = $("<section id='middle_earth'>");
-
   // 2. append the section to the body of the DOM.
-
-  const $body = $("body")
-  $body.append($middle_earth)
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
@@ -64,6 +57,12 @@ const makeMiddleEarth = () => {
   //   3c. includes an h1 with the name of the land inside each land article
 
   //   3d. appends each land to the middle-earth section
+
+  console.log("Trying to make middle earth.");
+
+  const $middle_earth = $("<section id='middle_earth'>");
+  const $body = $("body")
+  $body.append($middle_earth)
 
   for (let i = 0; i < lands.length; i++) {
     const $article = $("<article>");   // is there a way to pass an arrays index's value to an id? in one line?
@@ -83,16 +82,21 @@ makeMiddleEarth()
 // ============
 // Chapter 2
 // ============
+
+// 1. display an unordered list of the hobbits in the shire.
+
+// 2. give each hobbit a class of "hobbit"
+
+
+// hint: create a 'ul' outside the loop upon which to append the 'li's
+
+// hint: get 'The-Shire' by using its id
+
 const makeHobbits = () => {
 
   console.log('Make hobbits');
 
-  // 1. display an unordered list of the hobbits in the shire.
-
-  // 2. give each hobbit a class of "hobbit"
-
   const $hobbits = $("<ul id='hobbits'>");
-
   $("#The-Shire").append($hobbits);
 
   for (let i=0; i < hobbits.length; i++) {
@@ -101,11 +105,6 @@ const makeHobbits = () => {
     $li.text(hobbits[i]);
     $hobbits.append($li);
   }
-
-  // hint: create a 'ul' outside the loop upon which to append the 'li's
-
-  // hint: get 'The-Shire' by using its id
-
 };
 
 makeHobbits();
@@ -126,7 +125,20 @@ const keepItSecretKeepItSafe = () => {
 
   // when you think you have given Frodo the ring, check in your Elements tab
 
+  const $theRing = $("<div id='the-ring'>")
+
+  $(".hobbit").each(function(){               //is it ok to use "funciton in ES6?"
+    if ($(this).text() === "Frodo Baggins") {
+      $(this).append($theRing);
+    }
+  });
+
+  $theRing.append()
+
+
 };
+
+keepItSecretKeepItSafe()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
