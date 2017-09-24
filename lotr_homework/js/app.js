@@ -181,7 +181,22 @@ const makeBuddies = () => {
 
   // 3. give each of the buddies a class of "buddy"
 
+  const $elseWhere = $("<aside id='elseWhere'>");
+  $("#middle_earth").append($elseWhere);
+
+  const $buddies = $("<ul id='buddies'>");
+  $elseWhere.append($buddies);
+
+  for (let i=0; i < buddies.length; i++){
+    let $li = $("<li>");
+    $li.addClass("buddy");
+    $li.text(buddies[i]);
+    $buddies.append($li);
+  }
+
 };
+
+makeBuddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
