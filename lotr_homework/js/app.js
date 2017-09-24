@@ -322,6 +322,7 @@ const itsDangerousToGoAlone = () => {
   });
 
    const $mtDoom = $("<div id='mount-doom'>");
+   $mtDoom.text("Mount Doom")
    $("#Mordor").append($mtDoom);
 };
 
@@ -338,6 +339,15 @@ const weWantsIt = () => {
   // 2. Move the ring from Frodo and give it to Gollum
 
   // 3. Move Gollum into Mount Doom
+
+  const $gollum = $("<div id='gollum'>");
+  $gollum.text("Gollum");
+  $("#Mordor").append($gollum);
+
+  $theRing = $("#the-ring");
+
+  $gollum.append($theRing);
+  $("#mount-doom").append($gollum);
 
 };
 
