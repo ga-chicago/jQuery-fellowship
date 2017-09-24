@@ -196,6 +196,17 @@ const leaveTheShire = () => {
 // ============
 const beautifulStranger = () => {
 
+const heroes = $('.buddy')
+
+heroes.eq(3).html('Aragorn')
+
+  // for (i = 0; i < heroes.length; i++){
+  //   if(heroes[i].innerText === 'strider' ){
+  //     return heroes[i].innerText === 'Aragorn'
+  //   }
+  // }
+
+
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
   // hint: You can get a list of elements by tag name, such as 'aside'
