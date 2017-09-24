@@ -91,11 +91,24 @@ const makeHobbits = () => {
 
   // 2. give each hobbit a class of "hobbit"
 
+  const $hobbits = $("<ul id='hobbits'>");
+
+  $("#The-Shire").append($hobbits);
+
+  for (let i=0; i < hobbits.length; i++) {
+    const $li = $("<li>");
+    $li.addClass("hobbit");
+    $li.text(hobbits[i]);
+    $hobbits.append($li);
+  }
+
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
 
 };
+
+makeHobbits();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
