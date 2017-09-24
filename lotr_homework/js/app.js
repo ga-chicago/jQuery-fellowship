@@ -48,7 +48,12 @@ const makeMiddleEarth = () => {
 
   // 1. create a section tag with an id of middle-earth
 
+  const $middle_earth = $("<section id='middle_earth'>");
+
   // 2. append the section to the body of the DOM.
+
+  const $body = $("body")
+  $body.append($middle_earth)
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
@@ -60,7 +65,17 @@ const makeMiddleEarth = () => {
 
   //   3d. appends each land to the middle-earth section
 
+  for (let i = 0; i < lands.length; i++) {
+    const $article = $("<article>");   // is there a way to pass an arrays index's value to an id? in one line?
+    $article.attr("id", lands[i]);     // is ther a way to pass an array index's value to a constant name? $("$"+lands[i]).attr("id", lands[i]);
+    $middle_earth.append($article);
+    const $landName = $("<h1>");
+    $landName.text(lands[i]);
+    $article.append($landName);
+  }
 };
+
+makeMiddleEarth()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
