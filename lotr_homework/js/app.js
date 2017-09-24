@@ -91,21 +91,27 @@ const makeBaddies = () => {
   } 
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 4 complete - Made the Baddies"..
-
 // ============
 // Chapter 5
 // ============
 const makeBuddies = () => {
+  const $newaside = $('<aside></aside>');
+  $('section').append($newaside);
+  const $newul = $('<ul></ul>');
+  $newaside.append($newul);
+  for (i = 0; i < buddies.length; i++){
+    const $fellow = $('<li>' + buddies[i] + '</li>');
+    $fellow.addClass('buddy');
+    $newul.append($fellow);
+  } 
+
+};
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
   // 2. display an unordered list of buddies in the aside
 
   // 3. give each of the buddies a class of "buddy"
-
-};
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
