@@ -49,7 +49,6 @@ const makeMiddleEarth = () => {
   for (i = 0; i < lands.length; i++) {
     const $arty = $('<article></article>', {id: 'lands-' + i});
     const $h1 = $('<h1></h1>');
-    console.log($h1);
     $h1.text(lands[i]);
     $newsection.append($arty);
     $arty.append($h1);
@@ -107,27 +106,13 @@ const makeBuddies = () => {
 
 };
 
-  // 1. create an aside tag and append it to middle-earth below mordor
-
-  // 2. display an unordered list of buddies in the aside
-
-  // 3. give each of the buddies a class of "buddy"
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 5 complete - Made the Buddies".
-
 // ============
 // Chapter 6
 // ============
 const leaveTheShire = () => {
-
-  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
-  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+  $('#lands-1').append($('.hobbit'));
 };
 
-// COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
 // ============
