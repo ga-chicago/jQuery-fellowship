@@ -305,7 +305,6 @@ const hornOfGondor = () => {
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
   const $boromir = $('li.buddy').last();
   $boromir.css("text-decoration", "line-through");
-  console.log($boromir);
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
   const $urukHai = $('#Mordor').contents().last().children()[2];
@@ -313,7 +312,7 @@ const hornOfGondor = () => {
 
 };
 
-// console.log(hornOfGondor());
+console.log(hornOfGondor());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
@@ -323,11 +322,21 @@ const hornOfGondor = () => {
 // ============
 const itsDangerousToGoAlone = () => {
 
+  console.log("Frodo and Sam leave Fellowship");
+
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+  const $leavingMem = $('#the-fellowship').contents('ul').first().children();
+  for (f = 0; f < 2; f++){
+    $('#Mordor').append($leavingMem[f]);
+  }
 
   // 2. add a div with an id of 'mount-doom' to Mordor
+  $mtDoom = $('<div id="mount-doom"></div>');
+  $('#Mordor').append($mtDoom);
 
 };
+
+console.log(itsDangerousToGoAlone());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
