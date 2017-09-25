@@ -72,7 +72,7 @@ const makeMiddleEarth = () => {
   }
 };
 
-console.log(makeMiddleEarth());
+// console.log(makeMiddleEarth());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -102,7 +102,7 @@ const makeHobbits = () => {
   // hint: get 'The-Shire' by using its id
 };
 
-console.log(makeHobbits());
+// console.log(makeHobbits());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -129,7 +129,7 @@ const keepItSecretKeepItSafe = () => {
   // when you think you have given Frodo the ring, check in your Elements tab
 };
 
-console.log(keepItSecretKeepItSafe());
+// console.log(keepItSecretKeepItSafe());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -157,7 +157,7 @@ const makeBaddies = () => {
   $mordorArticle.append($ulBaddies);
 };
 
-console.log(makeBaddies());
+// console.log(makeBaddies());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -187,7 +187,7 @@ const makeBuddies = () => {
   $aside.append($ulBuddies);
 };
 
-console.log(makeBuddies());
+// console.log(makeBuddies());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -206,10 +206,9 @@ const leaveTheShire = () => {
   $rivendellLocation.append($shireHobbits);
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
 };
 
-console.log(leaveTheShire());
+// console.log(leaveTheShire());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -226,10 +225,9 @@ const beautifulStranger = () => {
   $strider.textContent = 'Aragorn';
 
   // hint: You can get a list of elements by tag name, such as 'aside'
-
 };
 
-console.log(beautifulStranger());
+// console.log(beautifulStranger());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -259,10 +257,9 @@ const forgeTheFellowShip = () => {
   const $listOfBuddies = $('aside').children()[0];
   $fellowDiv.append($listOfHobbits);
   $fellowDiv.append($listOfBuddies);
-
 };
 
-console.log(forgeTheFellowShip());
+// console.log(forgeTheFellowShip());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -283,10 +280,9 @@ const theBalrog = () => {
   $gandalfCla.className = 'the-white';
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
 };
 
-console.log(theBalrog());
+// console.log(theBalrog());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
@@ -309,10 +305,9 @@ const hornOfGondor = () => {
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
   const $urukHai = $('#Mordor').contents().last().children()[2];
   $urukHai.remove();
-
 };
 
-console.log(hornOfGondor());
+// console.log(hornOfGondor());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
@@ -333,10 +328,9 @@ const itsDangerousToGoAlone = () => {
   // 2. add a div with an id of 'mount-doom' to Mordor
   $mtDoom = $('<div id="mount-doom"></div>');
   $('#Mordor').append($mtDoom);
-
 };
 
-console.log(itsDangerousToGoAlone());
+// console.log(itsDangerousToGoAlone());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
@@ -359,10 +353,9 @@ const weWantsIt = () => {
   // 3. Move Gollum into Mount Doom
   const $gollumAndRing = $('div#gollum');
   $('div#mount-doom').append($gollumAndRing);
-
 };
 
-console.log(weWantsIt());
+// console.log(weWantsIt());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
@@ -372,13 +365,22 @@ console.log(weWantsIt());
 // ============
 const thereAndBackAgain = () => {
 
+  console.log("Returning home");
+
   // 1. remove Gollum and the Ring from the DOM
+  const $finalGollum = $('div#gollum');
+  $finalGollum.remove();
 
   // 2. remove all the baddies from the DOM
+  const $finalBaddies = $('#Mordor').contents('ul')[0];
+  $finalBaddies.remove();
 
   // 3. Move all the hobbits back to the shire
-
+  const $finalHobbits = $('.hobbit');
+  $('#The-Shire').append($finalHobbits);
 };
+
+// console.log(thereAndBackAgain());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
