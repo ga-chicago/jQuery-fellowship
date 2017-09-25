@@ -217,12 +217,9 @@ const weWantsIt = () => {
 // Chapter 13
 // ============
 const thereAndBackAgain = () => {
-
-  // 1. remove Gollum and the Ring from the DOM
-
-  // 2. remove all the baddies from the DOM
-
-  // 3. Move all the hobbits back to the shire
+  $('#gollum').remove();
+  $('.baddy').remove();
+  $('#lands-0').append($('.hobbit'));
 
 };
 
