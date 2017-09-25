@@ -197,6 +197,10 @@ const itsDangerousToGoAlone = () => {
 // Chapter 12
 // ============
 const weWantsIt = () => {
+  const $newdiv = $('<div></div>', {id: 'gollum'});
+  $('#lands-2').append($($newdiv));
+  $newdiv.append('#the-ring');
+  $('#mount-doom').append($newdiv);
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
