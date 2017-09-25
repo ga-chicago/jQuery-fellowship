@@ -119,11 +119,9 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-
-  // 1. change the buddy 'Strider' textnode to "Aragorn"
-
-  // hint: You can get a list of elements by tag name, such as 'aside'
-
+  $('.buddy').text(function () {
+    return $(this).text().replace("Strider", "Aragorn"); 
+});
 };
 
 // COMMIT YOUR WORK
@@ -133,6 +131,13 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
+  const $newdiv = $('<div></div>', {id: 'the-fellowship'});
+  const $h1 = $('<h1></h1>');
+  $h1.text('The Fellowship');
+  $newdiv.append($h1);
+  $('section').append($newdiv);
+  $newdiv.append($('.hobbit'));
+  $newdiv.append($('.buddy'));
 
   // 1. create a new div with an id 'the-fellowship'
 
