@@ -197,11 +197,19 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
+  console.log("Now leaving the Shire");
+
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+  const $rivendellLocation = $('#Rivendell');
+  const $shireLocation = $('#The-Shire');
+  const $shireHobbits = $shireLocation.children()[1];
+  $rivendellLocation.append($shireHobbits);
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
+
+// console.log(leaveTheShire);
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
