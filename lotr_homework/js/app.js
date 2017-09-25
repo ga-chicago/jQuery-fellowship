@@ -209,7 +209,7 @@ const leaveTheShire = () => {
 
 };
 
-// console.log(leaveTheShire);
+// console.log(leaveTheShire());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -219,11 +219,17 @@ const leaveTheShire = () => {
 // ============
 const beautifulStranger = () => {
 
+  console.log("Meeting Aragorn");
+
   // 1. change the buddy 'Strider' textnode to "Aragorn"
+  const $strider = $('aside').contents($('li')).children()[3];
+  $strider.textContent = 'Aragorn';
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
+
+// console.log(beautifulStranger());
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
