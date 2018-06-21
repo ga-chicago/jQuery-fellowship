@@ -54,6 +54,3 @@ the popups after you've completed a step, you can check to disable each popup an
 
 Commit your work after each function is complete and working properly
 
-## Need a jQuery Reminder?
-
-Use the Gitbook, or use the jQuery Docs
