@@ -43,9 +43,7 @@ const lands = [
 const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-
-  console.log("Trying to make middle earth.");
-
+ 
   // 1. create a section tag with an id of middle-earth
 
   // 2. append the section to the body of the DOM.
@@ -60,6 +58,20 @@ const makeMiddleEarth = () => {
 
   //   3d. appends each land to the middle-earth section
 
+  console.log("Trying to make middle earth.");
+
+  const $middle_earth = $("<section id='middle_earth'>");
+  const $body = $("body")
+  $body.append($middle_earth)
+
+  for (let i = 0; i < lands.length; i++) {
+    const $article = $("<article>");   // is there a way to pass an arrays index's value to an id? in one line?
+    $article.attr("id", lands[i]);     // is ther a way to pass an array index's value to a constant name? $("$"+lands[i]).attr("id", lands[i]);
+    $middle_earth.append($article);
+    const $landName = $("<h1>");
+    $landName.text(lands[i]);
+    $article.append($landName);
+  }
 };
 
 // COMMIT YOUR WORK
@@ -68,18 +80,29 @@ const makeMiddleEarth = () => {
 // ============
 // Chapter 2
 // ============
+
+// 1. display an unordered list of the hobbits in the shire.
+
+// 2. give each hobbit a class of "hobbit"
+
+
+// hint: create a 'ul' outside the loop upon which to append the 'li's
+
+// hint: get 'The-Shire' by using its id
+
 const makeHobbits = () => {
 
   console.log('Make hobbits');
 
-  // 1. display an unordered list of the hobbits in the shire.
+  const $hobbits = $("<ul id='hobbits'>");
+  $("#The-Shire").append($hobbits);
 
-  // 2. give each hobbit a class of "hobbit"
-
-  // hint: create a 'ul' outside the loop upon which to append the 'li's
-
-  // hint: get 'The-Shire' by using its id
-
+  for (let i=0; i < hobbits.length; i++) {
+    const $li = $("<li>");
+    $li.addClass("hobbit");
+    $li.text(hobbits[i]);
+    $hobbits.append($li);
+  }
 };
 
 // COMMIT YOUR WORK
@@ -98,7 +121,16 @@ const keepItSecretKeepItSafe = () => {
 
   // when you think you have given Frodo the ring, check in your Elements tab
 
+  const $theRing = $("<div id='the-ring'>")
+
+  $(".hobbit").each(function(){               //is it ok to use "funciton" in ES6?
+    if ($(this).text() === "Frodo Baggins") {
+      $(this).append($theRing);
+    }
+  });
 };
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -113,7 +145,19 @@ const makeBaddies = () => {
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
+
+  const $baddies = $("<ul id='baddies'>");
+  $("#Mordor").append($baddies);
+
+  for (let i=0; i < baddies.length; i++) {
+    const $li = $("<li>");
+    $li.addClass("baddy");
+    $li.text(baddies[i]);
+    $baddies.append($li);
+  }
 };
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -129,6 +173,19 @@ const makeBuddies = () => {
 
   // 3. give each of the buddies a class of "buddy"
 
+  const $elseWhere = $("<aside id='elseWhere'>");
+  $("#middle_earth").append($elseWhere);
+
+  const $buddies = $("<ul id='buddies'>");
+  $elseWhere.append($buddies);
+
+  for (let i=0; i < buddies.length; i++){
+    let $li = $("<li>");
+    $li.addClass("buddy");
+    $li.text(buddies[i]);
+    $buddies.append($li);
+  }
+
 };
 
 // COMMIT YOUR WORK
@@ -142,6 +199,8 @@ const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+
+  $("#Rivendell").append($("#The-Shire").children("#hobbits"));
 
 };
 
@@ -157,6 +216,11 @@ const beautifulStranger = () => {
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
+    $(".buddy").each(function(){         
+    if ($(this).text() === "Strider") { //what was this supossed to be?
+      $(this).text("Aragorn");
+    }
+  });
 };
 
 // COMMIT YOUR WORK
@@ -175,6 +239,15 @@ const forgeTheFellowShip = () => {
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
+  const $fellowship = $("<div id='the-fellowship'>");
+  $("#middle_earth").append($fellowship);
+
+  const $h1 = $("<h1>");
+  $h1.text("The Fellowship");
+  $fellowship.append($h1);
+
+  $("#the-fellowship").append($("#hobbits"));
+  $("#the-fellowship").append($("#buddies"));
 };
 
 // COMMIT YOUR WORK
@@ -191,10 +264,17 @@ const theBalrog = () => {
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
+$(".buddy").each(function()
+    {         
+    if ($(this).text() === "Gandalf the Grey") {
+      $(this).text("Gandalf the White");
+      $(this).addClass("the-white");
+      }
+    });
 };
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 9 complete - Updated Gandalf"
+// The commit message should read: 3
 
 // ============
 // Chapter 10
@@ -206,7 +286,19 @@ const hornOfGondor = () => {
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+  alert("The Horn of Gondor has been blown!")
 
+  $(".buddy").each(function() {
+    if ($(this).text() === "Boromir") {
+      $(this).css("text-decoration", "line-through");
+    };
+  });
+
+  $(".baddy").each(function() {
+    if ($(this).text() === "The Uruk-hai") {
+      $(this).remove();
+    }
+  });
 };
 
 // COMMIT YOUR WORK
@@ -221,6 +313,17 @@ const itsDangerousToGoAlone = () => {
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
+   $(".hobbit").each(function() {
+    if ($(this).text() === "Frodo Baggins") {
+      $("#Mordor").append($(this));
+    } else if ($(this).text() === "Samwise 'Sam' Gamgee") {
+      $("#Mordor").append($(this));
+    }
+  });
+
+   const $mtDoom = $("<div id='mount-doom'>");
+   $mtDoom.text("Mount Doom")
+   $("#Mordor").append($mtDoom);
 };
 
 // COMMIT YOUR WORK
@@ -237,6 +340,14 @@ const weWantsIt = () => {
 
   // 3. Move Gollum into Mount Doom
 
+  const $gollum = $("<div id='gollum'>");
+  $gollum.text("Gollum");
+  $("#Mordor").append($gollum);
+
+  $theRing = $("#the-ring");
+
+  $gollum.append($theRing);
+  $("#mount-doom").append($gollum);
 };
 
 // COMMIT YOUR WORK
@@ -252,6 +363,12 @@ const thereAndBackAgain = () => {
   // 2. remove all the baddies from the DOM
 
   // 3. Move all the hobbits back to the shire
+
+  $("#gollum").remove();
+  $("#baddies").remove();
+  $(".hobbit").each(function() {
+    $("#The-Shire").append($(this));
+  });
 
 };
 
